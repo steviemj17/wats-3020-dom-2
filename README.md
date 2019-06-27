@@ -36,6 +36,78 @@ The syntax is different but the concepts are very similar.
 
 In this assignment we'll process the data returned and use it to drive the creation HTML to make it available on the web page.
 
+### API's
+**API** is an acronym that stands for **Application Programming Interface**.  API's link us to resources which usually return data.  The resource is specified by a **URI** (acronym for **Uniform Resouce Indicator**) which looks a lot like a **URL** (acronym for **Uniform Resouce Locator**). URL's are a subset of URI's. 
+
+We'll do 3 tutorial's in which we fetch data from the [Random User Generator](https://randomuser.me).  This api will return data representing one or more people in a random fashion.  The format of the data returned is always the same, but the values differ.  Below is an example of what is returned with a call for a single person:
+```JSON
+{
+    "results": [
+        {
+            "gender": "female",
+            "name": {
+                "title": "mrs",
+                "first": "vanuza",
+                "last": "jesus"
+            },
+            "location": {
+                "street": "7610 rua são sebastiao ",
+                "city": "bacabal",
+                "state": "bahia",
+                "postcode": 83534,
+                "coordinates": {
+                    "latitude": "-78.5868",
+                    "longitude": "82.2891"
+                },
+                "timezone": {
+                    "offset": "+5:30",
+                    "description": "Bombay, Calcutta, Madras, New Delhi"
+                }
+            },
+            "email": "vanuza.jesus@example.com",
+            "login": {
+                "uuid": "e88bcd12-dc0f-4c1e-896e-a546c6d13256",
+                "username": "whitemouse399",
+                "password": "goldfing",
+                "salt": "Yc8Xg3qM",
+                "md5": "f18669a17ccbc5688e0309b2e89be74b",
+                "sha1": "582f474a7dadf7c43d613c48b5ddeb835df26ad1",
+                "sha256": "17f004a241a8b0d8c75137fe419aa57be9e4483dea5cb4ca43acb12e18598c72"
+            },
+            "dob": {
+                "date": "1958-01-11T16:34:20Z",
+                "age": 61
+            },
+            "registered": {
+                "date": "2008-12-21T11:17:21Z",
+                "age": 10
+            },
+            "phone": "(48) 0213-4399",
+            "cell": "(99) 5558-5305",
+            "id": {
+                "name": "",
+                "value": null
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/78.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/78.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/78.jpg"
+            },
+            "nat": "BR"
+        }
+    ],
+    "info": {
+        "seed": "d79f73090a290648",
+        "results": 1,
+        "page": 1,
+        "version": "1.2"
+    }
+}
+```
+All of the data above can be requested and then displayed on a web page.  The addition of a simple option can allow you to get data on multiple people in a single call.
+
+You'll use the **Star Wars** api in an assignment as well to list all the characters that make up Star Wars.  This api is describe here: [https://swapi.co/](https://swapi.co/). 
+
 ## Project Resources
 - [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)  
 - [$.get](https://api.jquery.com/jquery.get/)
@@ -64,3 +136,5 @@ Final Display - note that data may not match what you see because this api retur
 
 ## Attributes
 
+https://randomuser.me/
+https://swapi.co/

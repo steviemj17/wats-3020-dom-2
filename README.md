@@ -117,24 +117,80 @@ You'll use the **Star Wars** api in an assignment as well to list all the charac
 ## Basic Requirements
 There are 3 directories with code that contains TODO's that you will update using instructions below.  For 4th directory, **4-data-driven-doc**, you will be required to used what you learned in the first three tutorials to create your own data driven page.  
 
-1. Use the JavaScript `fetch` command to retrieve local data  
+1. **1-data-fetch-local** Use the JavaScript `fetch` command to retrieve local data  
 There is a local file in the directory **1-data-fetch-local** named **data.json** that contains data about 3 people.  You'll use the `fetch` command to read that data and display it as a list on the web page.  You'll find TODO's in the `js/main.js` file. 
-- xxx
-- xxx
+  - TODO In order to declutter the code we'll write a function that accepts title, firstname, lastname and email, creates an `li` element and add the data to the element.  It returns the element.
+```JavaScript
+function createPersonEl(title,firstname,lastname,email) {
+  let nameEl = document.createElement('li')
+  nameEl.innerHTML = `${title} ${firstname} ${lastname}, ${email}`
+  return nameEl
+}
+```
+  - TODO When working with the fetch command, the response is an object for which you must call the the `.json()` method to extract JSON data from the body of the reponse. Through function chaining this is handed off to another `then` function to be processed.
+```JavaScript
+    return response.json();
+```
+  - TODO Process the json and by call the create element function and appending list items to the list that is defined in the **index.html**. 
+  ```JavaScript
 
-Final Display - note that data may not match what you see because this api returns random names
+  for (let person of myJson.persons) {
+      personList.appendChild(createPersonEl(person.title, person.firstname, person.lastname, person.email))
+    }
+  ```
+**Final Display**
+<div>
 <img src="./images/fetch-local.png" style="display:inline-block;border:1px solid black" width="300" />
+</div>
 
 
-2. Use the JavaScript `fetch` command to retrieve internet data
+2. **2-data-fetch-internet** Use the JavaScript `fetch` command to retrieve internet data 
+This code is similar to fetching locally except the URI is and internet path.  Note that this returns 3 random people so your data may not match the image below. Also, the data does not contain any formatting, so there is no capitalization or punctuation.  
+  - TODO add a uri that fetches 3 people from the randomuser.me api
+  ```JavaScript
+fetch('https://randomuser.me/api/?results=3')
 
-3. Use the jQuery Ajax `$get()` command to retrieve internet data
+  ```
 
-4. Create a data driven document
+**Final Display**
+<div>
+<img src="./images/fetch-internet.png" style="display:inline-block;border:1px solid black" width="300" />
+</div>
+
+3. **3-data-jquery-internet** Use jquery to get the data and process it  
+This code will look similar to the code that uses fetch, but with jQuery syntax.  In addition there won't be the extra setp of extra JSON from the body of the repsonse. Note that a link to the jQuery version 3 CDN has been added to the index.html.
+
+  - TODO use jQuery `get` commmand to request 3 results from the randomuser.me api
+  ```JavaScript
+$.get( "https://randomuser.me/api/", { results: 3 } )
+  ```
+**Final Display**
+<div>
+<img src="./images/jquery-internet.png" style="display:inline-block;border:1px solid black" width="300" />
+</div>  
+
+4. **4-data-driven-doc** Create a data driven document 
+In this exercise, you'll create a list of 10 characters from Star Wars using a call for data to the Starwars API. If you don't specify a "page" for the Star Wars people request, you'll automatically get back the first 10.  The response showing just 1 of the 10 is shown below:
+<div>
+<img src="./images/star-wars-json.png" style="display:inline-block;border:1px solid black" width="300" />
+</div>  
+
+  - add index.html, css and js directories and files to the 4-data-driven-doc directory
+  - **hint:** the 2-data-fetch-internet can serve as a good pattern for requesting data
+  - the URI for starwars is: `https://swapi.co/api/people`
+  - show at least the name of each character returned for 1 page
+**Final Display**
+<div>
+<img src="./images/star-wars-people.png" style="display:inline-block;border:1px solid black" width="300" />
+</div> 
+
 
 ## Stretch Goals
+1. Add more data to the star wars output
+2. Write a function to captialize the first letter, and put a period at the end, of each title from randomuser.me
+3. If you used the fetch method in version 4, create a new example that uses jquery to get data from Star Wars API.
 
 ## Attributes
 
-https://randomuser.me/
-https://swapi.co/
+[Random User API](https://randomuser.me/)  
+[Star Wars API](https://swapi.co/)

@@ -1,20 +1,13 @@
-function createPersonEl(title,firstname,lastname,email) {
-  let nameEl = document.createElement('li')
-  nameEl.innerHTML = `${title} ${firstname} ${lastname}, ${email}`
-  return nameEl
-}
+//TODO create a function that accepts data and return a list item
 
-fetch('./data.json')
+//TODO add the URL to the fetch command to pickup the local data.json file
+fetch()
   .then(function (response) {
-    return response.json();
+    //TODO return a JSON object 
   })
   .then(function (myJson) {
-    console.log(JSON.stringify(myJson));
     let personList = document.querySelector('.person-list')
-    for (let person of myJson.persons) {
-      console.log(person.firstname)
-      personList.appendChild(createPersonEl(person.title, person.firstname, person.lastname, person.email))
-    }
+    //TODO iterate through json data, create list elements and append to the html list
   });
 
   

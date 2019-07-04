@@ -114,7 +114,7 @@ You'll use the **Star Wars** api in an assignment as well to list all the charac
 - [JSON](https://developer.mozilla.org/en-US/docs/Glossary/JSON)  
 - [promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
-## Basic Requirements
+## Tutorials
 Fork this repository.
 
 There are 3 directories with code that contains TODO's that you will update using instructions below.  For 4th directory, **4-data-driven-doc**, you will be required to used what you learned in the first three tutorials to create your own data driven page.  
@@ -193,7 +193,7 @@ In this exercise, you'll create a list of 10 characters from Star Wars using a c
 3. If you used the fetch method in version 4, create a new example that uses jquery to get data from Star Wars API.
 
 ## Turn in assignment
-Push your code to the forked repository in your account and **create a pull request**.  This will make it available for instructor code review.  
+Push your code to the forked repository in your account and [**create a pull request**](https://help.github.com/en/articles/creating-a-pull-request).  This will make it available for instructor code review.  
 
 Turn in 2 URL's on Canvas which should be of the format:
 * https://github.com/{account name}/{repo name}

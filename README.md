@@ -390,7 +390,7 @@ Push your code to the forked repository in your account.
 
 Turn in 2 URL's on Canvas which should be of the format:
 * https://github.com/{account name}/{repo name}
-* https://{account name}.github.com/{repo name}
+* https://{account name}.github.io/{repo name}
 
 
 

@@ -119,7 +119,8 @@ Fork this repository.
 
 There are 3 directories with code that contains TODO's that you will update using instructions below.  For 4th directory, **4-data-driven-doc**, you will be required to used what you learned in the first three tutorials to create your own data driven page.  
 
-1. **1-data-fetch-local** Use the JavaScript `fetch` command to retrieve local data  
+**1-data-fetch-local** 
+Use the JavaScript `fetch` command to retrieve local data  
 There is a local file in the directory **1-data-fetch-local** named **data.json** that contains data about 3 people.  You'll use the `fetch` command to read that data and display it as a list on the web page.  You'll find TODO's in the `js/main.js` file. 
   - TODO In order to declutter the code we'll write a function that accepts title, firstname, lastname and email, creates an `li` element and add the data to the element.  It returns the element.
 ```JavaScript
@@ -135,10 +136,9 @@ function createPersonEl(title,firstname,lastname,email) {
 ```
   - TODO Process the json and by call the create element function and appending list items to the list that is defined in the **index.html**. 
   ```JavaScript
-
   for (let person of myJson.persons) {
-      personList.appendChild(createPersonEl(person.title, person.firstname, person.lastname, person.email))
-    }
+    personList.appendChild(createPersonEl(person.title, person.firstname,       person.lastname, person.email))
+  }
   ```
 **Final Display**
 <div>
@@ -146,7 +146,8 @@ function createPersonEl(title,firstname,lastname,email) {
 </div>
 
 
-2. **2-data-fetch-internet** Use the JavaScript `fetch` command to retrieve internet data 
+**2-data-fetch-internet** 
+Use the JavaScript `fetch` command to retrieve internet data 
 This code is similar to fetching locally except the URI is and internet path.  Note that this returns 3 random people so your data may not match the image below. Also, the data does not contain any formatting, so there is no capitalization or punctuation.  
   - TODO add a uri that fetches 3 people from the randomuser.me api
   ```JavaScript
@@ -159,10 +160,11 @@ fetch('https://randomuser.me/api/?results=3')
 <img src="./images/fetch-internet.png" style="display:inline-block;border:1px solid black" width="300" />
 </div>
 
-3. **3-data-jquery-internet** Use jquery to get the data and process it  
-This code will look similar to the code that uses fetch, but with jQuery syntax.  In addition there won't be the extra setp of extra JSON from the body of the repsonse. Note that a link to the jQuery version 3 CDN has been added to the index.html.
+**3-data-jquery-internet**   
+Use jquery to get the data and process it.    
+This code will look similar to the code that uses fetch, but with jQuery syntax.  In addition there won't be the extra step of extra JSON from the body of the response. Note that a link to the jQuery version 3 CDN has been added to the index.html.
 
-  - TODO use jQuery `get` commmand to request 3 results from the randomuser.me api
+  - TODO use jQuery `get` command to request 3 results from the randomuser.me api
   ```JavaScript
 $.get( "https://randomuser.me/api/", { results: 3 } )
   ```
@@ -171,7 +173,8 @@ $.get( "https://randomuser.me/api/", { results: 3 } )
 <img src="./images/jquery-internet.png" style="display:inline-block;border:1px solid black" width="300" />
 </div>  
 
-4. **4-data-driven-doc** Create a data driven document 
+**4-data-driven-doc** 
+Create a data driven document.   
 In this exercise, you'll create a list of 10 characters from Star Wars using a call for data to the Starwars API. If you don't specify a "page" for the Star Wars people request, you'll automatically get back the first 10.  The response showing just 1 of the 10 is shown below:
 <div>
 <img src="./images/star-wars-json.png" style="display:inline-block;border:1px solid black" width="300" />
@@ -192,7 +195,6 @@ In this exercise, you'll create a list of 10 characters from Star Wars using a c
 2. Write a function to captialize the first letter, and put a period at the end, of each title from randomuser.me
 3. If you used the fetch method in version 4, create a new example that uses jquery to get data from Star Wars API.
 
-## Turn in assignment
 
 ## Turn in assignment
 Push your code to the forked repository in your account.  

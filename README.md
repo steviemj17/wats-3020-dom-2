@@ -1,4 +1,8 @@
 # WATS 3020: Document Object Model 2
+### **Walkthrough Video**
+[DOM-2](https://www.youtube.com/watch?v=jKHv54n0WB0)
+***
+
 ### Data Driven DOM: Using Fetch and jQuery to Retrieve Data
 
 Next to the importance of creating web pages with dynamic HTML and CSS, is the idea of data driven web pages.  Applications are made up of both code and data, and in order to create applications we need to manage data on the page.  In fact, we need to let the data drive the way in which the page is rendered.  If our data contains of list of 5 items, this means our html will probably contain a list (`ul` or `ol`) with 5 list items (`li`).

@@ -3,8 +3,8 @@ function createPersonEl(title,firstname,lastname,email) {
   nameEl.innerHTML = `${title} ${firstname} ${lastname} ${email}`
   return nameEl
 }
-//TODO add the URL to fetch data from the randomuser.me api
-fetch()
+
+fetch('https://randomuser.me/api/?results=3')
   .then(function (response) {
     return response.json();
   })
